@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button icon-only color="royal">
+        <ion-icon name="funnel"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-title>
+      Campaigns
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="royal">
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="selected-issues">
+    <button *ngFor="let issue of issues.selectedIssues" class="button-tags" ion-button round>{{issue.name}}</button>
+  </div>
+
+  <ion-list>
+
+    <ion-card *ngFor="let campaign of campaigns" (click)="showDetail(campaign)">
+      <img [src]="campaign.image"/>
+      <ion-card-content>
+        <ion-card-title class="campaign-title">
+          {{campaign.title}}
+          </ion-card-title>
+        <!-- <p>
+          {{campaign.description}}
+        </p>
+ -->
+      </ion-card-content>
+      <ion-row>
+        <ion-col>
+          <button ion-button icon-left clear small>
+            <ion-icon name="thumbs-up"></ion-icon>
+            <div>{{campaign.likes | number: 0}}</div>
+          </button>
+        </ion-col>
+        <ion-col>
+          <button ion-button icon-left clear small>
+            <ion-icon name="cash"></ion-icon>
+            <div>Donate</div>
+          </button>
+        </ion-col>
+        <ion-col>
+          <button ion-button icon-left clear small>
+            <ion-icon name="share"></ion-icon>
+            <div>Share</div>
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+  </ion-list>
+
+</ion-content>

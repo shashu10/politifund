@@ -1,0 +1,33 @@
+page-login {
+
+    img {
+       display:block;
+       margin:auto;
+    }
+
+    .btn-container {
+        padding: 20px 20px 0 20px;
+    }
+
+    .logo-image {
+        padding: 20px;
+    }
+    .logo-image img {
+        height: 90px;
+    }
+    .logo-name {
+        padding: 5px 20px;
+    }
+    
+    .underline {
+        text-decoration: underline;
+    }
+
+    .launch {
+        padding-top: 10px;
+        text-align: center;
+    }
+    .facebook-button {
+        background-color: #3b5998;
+    }
+}

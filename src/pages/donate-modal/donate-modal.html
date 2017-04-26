@@ -1,0 +1,78 @@
+<ion-header>
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">Cancel</button>
+    </ion-buttons>
+    <ion-title>
+      Donate Modal
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <br>
+
+  <ion-range [(ngModel)]="donateAmount" min="0" max="5000">
+      <ion-label range-left>0</ion-label>
+      <ion-label range-right>5K</ion-label>
+  </ion-range>
+
+  <!-- <ion-badge>{{donateAmount}}</ion-badge> -->
+
+  <h4>Your donation will influence <ion-badge>{{donateAmount * 50 | number:0}}</ion-badge> people</h4>
+
+  <div class="btn-container">
+    <button ion-button block (click)="submit()">Submit</button>
+  </div>
+  <!-- <ion-list> -->
+    <!-- <ion-list-header>
+      Found {{campaigns.length}} relevant campaigns
+    </ion-list-header>
+    <ion-item *ngFor="let campaign of campaigns" padding>
+        <ion-label>{{campaign.title}}</ion-label>
+    </ion-item> -->
+
+    <!-- <ion-card>
+      <img src="assets/campaigns/nin-live.png"/>
+      <ion-card-content>
+        <ion-card-title>
+          Nine Inch Nails Live
+          </ion-card-title>
+        <p>
+          The most popular industrial group ever, and largely
+          responsible for bringing the music to a mass audience.
+        </p>
+      </ion-card-content>
+    </ion-card> -->
+  <!-- </ion-list> -->
+
+  <!-- <h1>{{campaign.title}}</h1> -->
+
+
+  <!-- <video src="http://www.sample-videos.com/video/mp4/720/big_buck_bunny_720p_1mb.mp4" controls="controls"></video> -->
+
+  <!-- <p>{{campaign.description}}</p> -->
+
+  <!-- <ion-row>
+    <ion-col>
+      <button ion-button icon-left clear small>
+        <ion-icon name="thumbs-up"></ion-icon>
+        <div>Endorse</div>
+      </button>
+    </ion-col>
+    <ion-col>
+      <button ion-button icon-left clear small>
+        <ion-icon name="text"></ion-icon>
+        <div>Donate</div>
+      </button>
+    </ion-col>
+    <ion-col>
+      <button ion-button icon-left clear small>
+        <ion-icon name="share"></ion-icon>
+        <div>Share</div>
+      </button>
+    </ion-col>
+  </ion-row> -->
+
+</ion-content>

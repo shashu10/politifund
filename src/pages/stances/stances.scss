@@ -1,0 +1,23 @@
+page-stances {
+    ion-label {
+        white-space: inherit;
+    }
+    .button-container {
+        bottom: 0;
+        width: 100%;
+        padding: 20px;
+
+        button {
+            width: 100%;
+        }
+    }
+    button {
+        border: 1px solid color($colors, primary, base);
+    }
+    button[color="danger"] {
+        border: 1px solid color($colors, danger, base);
+    }
+    ion-icon {
+        font-size: 28px;
+    }
+}

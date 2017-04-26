@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Campaign Detail
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <!-- <ion-list> -->
+    <!-- <ion-list-header>
+      Found {{campaigns.length}} relevant campaigns
+    </ion-list-header>
+    <ion-item *ngFor="let campaign of campaigns" padding>
+        <ion-label>{{campaign.title}}</ion-label>
+    </ion-item> -->
+
+    <!-- <ion-card>
+      <img src="assets/campaigns/nin-live.png"/>
+      <ion-card-content>
+        <ion-card-title>
+          Nine Inch Nails Live
+          </ion-card-title>
+        <p>
+          The most popular industrial group ever, and largely
+          responsible for bringing the music to a mass audience.
+        </p>
+      </ion-card-content>
+    </ion-card> -->
+  <!-- </ion-list> -->
+
+  <h1>{{campaign.title}}</h1>
+
+  <div class="video-container">
+    <video src="assets/video.mp4" autoplay></video>
+  </div>
+  
+  <h4 class="subtitle">Fundraising Goal</h4>
+  <div>
+    <img src="assets/progressbar.png"/>
+  </div>
+
+  <h4 class="subtitle">Overview</h4>
+
+  <p>California is voting to repeal the death penalty on November 8th. Donate to fund a television ad targeted at swing voters in Stanislaus County.</p>
+
+  <button class="button-tags" ion-button round>Death Penalty</button>
+  <button class="button-tags" ion-button round>California</button>
+
+  <h4 class="subtitle">Map of Influence</h4>
+
+  <div>
+    <img src="assets/map.png"/>
+  </div>
+  <ion-row>
+    <ion-col>
+      <button ion-button icon-left clear small>
+        <ion-icon name="thumbs-up"></ion-icon>
+        <div>{{campaign.likes}}</div>
+      </button>
+    </ion-col>
+    <ion-col>
+      <button ion-button icon-left clear small (click)="donate()">
+        <ion-icon name="cash"></ion-icon>
+        <div>Donate</div>
+      </button>
+    </ion-col>
+    <ion-col>
+      <button ion-button icon-left clear small>
+        <ion-icon name="share"></ion-icon>
+        <div>Share</div>
+      </button>
+    </ion-col>
+  </ion-row>
+
+</ion-content>

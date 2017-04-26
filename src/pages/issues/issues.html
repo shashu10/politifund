@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-navbar>
+
+    <ion-title>
+      Select Issues (Step 3 of 3)
+    </ion-title>
+
+<!--     <ion-buttons end *ngIf="canGoNext">
+      <button ion-button icon-right (click)="next()">
+          Next <ion-icon name="arrow-forward"></ion-icon>
+      </button>
+    </ion-buttons> -->
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <!-- <ion-list> -->
+    <ion-list-header>
+      Pick issues that interest you
+    </ion-list-header>
+
+    <ion-grid>
+      <ion-row *ngFor="let group of issuesGroup">
+        <ion-col width-50 *ngFor="let issue of group">
+          <button ion-button block round [outline]="!issue.selected" (click)="issue.selected = !issue.selected">{{issue.name}}</button>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  <div class="button-container">
+    <button class="submit-button" ion-button (click)="next()">Done!</button>
+  </div>
+    <!-- <template ngFor let-issue [ngForOf]="issues" let-i="index" [ngForTrackBy]="trackByFn">
+        <ion-item padding (click)="toggleDetails(issue)">
+          {{issue.title}}
+        </ion-item>
+
+          <div *ngIf="issue.showDetails">
+
+            <ion-item *ngFor="let subIssue of issue.subIssues" padding>
+                <ion-label>{{subIssue.title}}</ion-label>
+                <ion-checkbox [(ngModel)]="subIssue.selected"></ion-checkbox>
+            </ion-item>
+          </div>
+
+    </template> -->
+  <!-- </ion-list> -->
+
+</ion-content>

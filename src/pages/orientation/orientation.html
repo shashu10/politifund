@@ -1,0 +1,64 @@
+<ion-header>
+    <ion-navbar hideBackButton="true">
+        <ion-title>
+            Profile (Step 1 of 3)
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+<ion-content>
+    <ion-list>
+    <br>
+<!--         <ion-list-header>
+            What do you want to do?
+        </ion-list-header> -->
+        <ion-item no-lines>
+            Where are you located?
+        </ion-item>
+        <ion-item>
+          <ion-label fixed>Location</ion-label>
+          <ion-input type="text" value=""></ion-input>
+        </ion-item>
+        <br>
+        <ion-item no-lines>
+            How do you want to take action?
+        </ion-item>
+        <ion-item no-lines>
+            <ion-label>Select</ion-label>
+            <ion-select>
+                <ion-option value="donate">Donate</ion-option>
+                <ion-option value="volunteer">Volunteer</ion-option>
+                <ion-option value="petition">Petition</ion-option>
+                <ion-option value="learnmore">Learn More</ion-option>
+            </ion-select>
+        </ion-item>
+        <br>
+        <ion-item no-lines>
+            Do you identify with a political party?
+        </ion-item>
+        <ion-item no-lines>
+            <ion-label>Select</ion-label>
+            <ion-select>
+                <ion-option value="democratic">Democratic</ion-option>
+                <ion-option value="republican">Republican</ion-option>
+                <ion-option value="independent">Independent</ion-option>
+            </ion-select>
+        </ion-item>
+    </ion-list>
+    <div class="button-container">
+        <button class="submit-button" ion-button (click)="next()">Continue</button>
+    </div>
+    <!-- <template ngFor let-issue [ngForOf]="issues" let-i="index" [ngForTrackBy]="trackByFn">
+        <ion-item padding (click)="toggleDetails(issue)">
+          {{issue.title}}
+        </ion-item>
+
+          <div *ngIf="issue.showDetails">
+
+            <ion-item *ngFor="let subIssue of issue.subIssues" padding>
+                <ion-label>{{subIssue.title}}</ion-label>
+                <ion-checkbox [(ngModel)]="subIssue.selected"></ion-checkbox>
+            </ion-item>
+          </div>
+
+    </template> -->
+</ion-content>

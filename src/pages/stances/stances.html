@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Stances  (Step 2 of 3)
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-list-header>
+      Take a stance on these issues
+    </ion-list-header>
+    <ion-item *ngFor="let stance of stances" padding>
+        <ion-label>{{stance.question}}</ion-label>
+        <button (click)="toggleYes(stance)" ion-button item-right [outline]="!stance.yes"><ion-icon name="checkmark"></ion-icon></button>
+        <button (click)="toggleNo(stance)" ion-button item-right [outline]="!stance.no" color="danger"><ion-icon name="close"></ion-icon></button>
+    </ion-item>
+  </ion-list>
+  
+  <div class="button-container">
+    <button class="submit-button" ion-button (click)="next()">Submit</button>
+  </div>
+</ion-content>

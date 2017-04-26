@@ -1,0 +1,33 @@
+page-campaign-detail {
+    .scroll-content {
+        padding: 0 10px 10px 10px;
+    }
+
+    video {
+        width: 100%;
+    }
+    img {
+       display:block;
+       margin:auto;
+    }
+    h1 {
+        text-align: center;
+        color: #5186A8;
+        padding-bottom: 10px;
+    }
+    .video-container {
+        video {
+            border: 1px solid #cacaca;
+        }
+    }
+
+    .subtitle {
+        border-bottom: 2px solid #5186a8;
+        color: #5186a8;
+    }
+    .button-tags {
+        padding: 0 1.6rem;
+        font-size: 1.2rem;
+        height: 2.0em;
+    }
+}
